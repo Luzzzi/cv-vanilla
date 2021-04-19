@@ -1,4 +1,4 @@
-@font-face {
+@font-face { /* Police manuscrite titre */
     font-family: 'melody_southernscript';
     src: url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff2') format('woff2'),
          url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff') format('woff');
@@ -6,7 +6,7 @@
     font-style: normal;
 
 }
-@font-face {
+@font-face { /*Police majuscule sous-titre */
     font-family: 'melody_southernregular';
     src: url('fonts/Melody_southern/melodysouthern-webfont.woff2') format('woff2'),
          url('fonts/Melody_southern/melodysouthern-webfont.woff') format('woff');
@@ -14,7 +14,7 @@
     font-style: normal;
 
 }
-@font-face {
+@font-face { /*Police texte */
     font-family: 'ciclesemi';
     src: url('fonts/Cicle_Semi/cicle_semi-webfont.woff2') format('woff2'),
          url('fonts/Cicle_Semi/cicle_semi-webfont.woff') format('woff');
@@ -22,11 +22,60 @@
     font-style: normal;
 
 }
-@font-face {
+@font-face { /* Police texte fine */
     font-family: 'ciclefina';
     src: url('fonts/Cicle_Fina/cicle_fina-webfont.woff2') format('woff2'),
          url('fonts/Cicle_Fina/cicle_fina-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
+}
+#header_block
+{
+    width: 100%;
+    height: 150px;
+    background: url("images/background_image.jpg") fixed no-repeat;
+    border: 1px #dda9a5 solid;
+}
+.logo
+{
+    width: 450px;
+    height: 105 px;
+    background: white;
+    border: 1px #dda9a5 solid;
+    display : flex;
+    flex-direction :column;
+    justify-content: center;
+    position: absolute; 
+    top : 93px;
+    left : 138px;
+}
+.logo h1
+{
+    font-family: 'melody_southernscript';
+    font-size: 3.5em;
+    text-align: center;
+    color: #11253a;
+    margin: auto;
+    
+
+}
+.logo h2
+{
+    font-family: 'melody_southernregular';
+    font-size: 1.15em;
+    color: #dda9a5;
+    margin: auto;
+}
+
+p
+{
+    font-family: 'ciclefina';
+    color: #11253a;
+}
+#subtitle
+{
+    font-size: 1.3em;
+    padding-left: 20px;
+    padding-top: 55px;
 }
