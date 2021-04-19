@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'melody_southernscript';
+    src: url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff2') format('woff2'),
+         url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'melody_southernregular';
+    src: url('fonts/Melody_southern/melodysouthern-webfont.woff2') format('woff2'),
+         url('fonts/Melody_southern/melodysouthern-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ciclesemi';
+    src: url('fonts/Cicle_Semi/cicle_semi-webfont.woff2') format('woff2'),
+         url('fonts/Cicle_Semi/cicle_semi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ciclefina';
+    src: url('fonts/Cicle_Fina/cicle_fina-webfont.woff2') format('woff2'),
+         url('fonts/Cicle_Fina/cicle_fina-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
