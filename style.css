@@ -196,6 +196,122 @@ ul.cloud li
 { /* Changement de couleur pendant survol */ 
     color: #dda9a5;
 } 
+/* Ajout d'un texte au survol */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext 
+{
+  visibility: hidden;
+  width: 120px;
+  background-color: #dda9a5;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext 
+{
+  visibility: visible;
+  opacity: 1;
+}
+.righttooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+.righttooltip .tooltiptext 
+{
+    visibility: hidden;
+    width: 120px;
+    background-color:#dda9a5;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.righttooltip:hover .tooltiptext 
+{
+    visibility: visible;
+    opacity: 1;
+}
+.lefttooltip 
+{
+    position: relative;
+    display: inline-block;
+}
+  
+.lefttooltip .tooltiptext 
+{
+    visibility: hidden;
+    width: 120px;
+    background-color: #dda9a5;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+  
+.lefttooltip:hover .tooltiptext 
+{
+    visibility: visible;
+    opacity: 1;
+}
+.bottomtooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bottomtooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #dda9a5;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .bottomtooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
 /* Bloc Formation */ 
 .formation
 {
