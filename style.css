@@ -1,10 +1,10 @@
+
 @font-face { /* Police manuscrite titre */
     font-family: 'melody_southernscript';
     src: url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff2') format('woff2'),
          url('fonts/Melody_southern_script/melodysouthern-script-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face { /*Police majuscule sous-titre */
     font-family: 'melody_southernregular';
@@ -49,7 +49,7 @@
     justify-content: center;
     position: absolute; 
     top : 93px;
-    left : 138px;
+    left : 125px;
 }
 .logo h1
 {
@@ -69,6 +69,13 @@
     margin: auto;
 }
 /* Définition des styles de polices */ 
+section, .cloud, .formation_aside
+{
+    width : 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 p, ul
 {
     font-family: 'ciclefina';
@@ -107,13 +114,15 @@ h3
 .block_1
 {
     display: flex;
-    margin: 2em;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
 }
 .skills
 {
+    width: 450px;
     list-style-image: url(images/Fichier\ 3-8.png);
     font-size: 1.3em;
-    border-right: #11253a solid 1px;
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -123,7 +132,13 @@ h3
     padding: 0.25em;
 }
 /* Bloc des réalisations */ 
-
+.block_2
+{
+    width: 225px;
+    border-left: #11253a solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .image
 {
     width : 150px;
@@ -135,11 +150,13 @@ h3
 {
     display: flex;
     align-items: center;
+    
     width: 1020px;
     margin-left: 18px;
 }
 .project_text
 {
+    width: 350px;
     margin-left: 10px;
     margin-top: 0px;
     text-align: justify;
@@ -150,8 +167,10 @@ h3
 }
 #cloud /* A MODIFIER - ajouter des espaces au-dessus et en dessous */
 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 ul.cloud
 {
@@ -197,7 +216,8 @@ ul.cloud li
     color: #dda9a5;
 } 
 /* Ajout d'un texte au survol */
-.tooltip {
+.tooltip, .righttooltip, .bottomtooltip, .lefttooltip, .bottomtooltip2, .toptooltip
+{
   position: relative;
   display: inline-block;
 }
@@ -205,19 +225,19 @@ ul.cloud li
 .tooltip .tooltiptext 
 {
   visibility: hidden;
-  width: 120px;
+  width: 220px;
   background-color: #dda9a5;
   color: #fff;
   text-align: center;
+  line-height: normal;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 100%;
+  bottom: 105%;
   left: 50%;
   margin-left: -60px;  
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
+  opacity: 0;/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   transition: opacity 1s;
 }
 .tooltip:hover .tooltiptext 
@@ -225,21 +245,39 @@ ul.cloud li
   visibility: visible;
   opacity: 1;
 }
-.righttooltip {
-    position: relative;
-    display: inline-block;
-  }
-
+.toptooltip .tooltiptext 
+{
+  visibility: hidden;
+  width: 220px;
+  background-color: #dda9a5;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 200%;
+  left: 50%;
+  margin-left: -60px;  
+  opacity: 0;/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  transition: opacity 1s;
+}
+.toptooltip:hover .tooltiptext 
+{
+  visibility: visible;
+  opacity: 1;
+}
 .righttooltip .tooltiptext 
 {
     visibility: hidden;
-    width: 120px;
+    width: 220px;
     background-color:#dda9a5;
     color: #fff;
     text-align: center;
+    line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
-    
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
@@ -253,22 +291,17 @@ ul.cloud li
     visibility: visible;
     opacity: 1;
 }
-.lefttooltip 
-{
-    position: relative;
-    display: inline-block;
-}
-  
+
 .lefttooltip .tooltiptext 
 {
     visibility: hidden;
-    width: 120px;
+    width: 220px;
     background-color: #dda9a5;
     color: #fff;
     text-align: center;
+    line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: -5px;
@@ -282,44 +315,92 @@ ul.cloud li
     visibility: visible;
     opacity: 1;
 }
-.bottomtooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
   .bottomtooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 220px;
     background-color: #dda9a5;
     color: #fff;
     text-align: center;
+    line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    top: 100%;
+    top: 105%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 1s;
   }
-  
   .bottomtooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
 
-
+.bottomtooltip2 .tooltiptext 
+{
+    visibility: hidden;
+    width: 220px;
+    background-color: #dda9a5;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.bottomtooltip2:hover .tooltiptext 
+{
+    visibility: visible;
+    opacity: 1;
+}
 
 /* Bloc Formation */ 
-.formation
+.formation_aside
 {
-    margin: 2em;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .formation li
 {
     list-style: none;
     font-size : 1.2em; 
     padding: 0.25em;
+    width: 650px;
+    line-height: 35px;
+}
+aside
+{
+    width: 450px;
+    background-color: #f3efed;
+    border: 1px #dda9a5 solid;
+    text-align: justify;
+    line-height: 18px; 
+    font-size: 0.8em;
+    z-index: 1;
+    padding: 0.5em;
+    padding-top: 1em;
+}
+aside h3
+{
+    background-color: #fff;
+    border: 2.8px #dda9a5 solid;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.699);
+    padding: 0.2em;
+    text-align: center;
+    width: 250px;
+    position : relative;
+    z-index: 2;
+    margin-left: 95px;
+    margin-top: -40px;
 }
