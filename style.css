@@ -31,17 +31,28 @@
 
 }
 /* En-tête - bannière */ 
+body
+{
+    width: 100%;
+    margin: 0;
+}
+#global
+{
+    width :70% ;
+    margin :auto ;
+    padding :25px ;
+}
 #header_block
 {
     width: 100%;
     height: 150px;
-    background: url("images/background_image.jpg") fixed no-repeat;
-    border: 1px #dda9a5 solid;
+    background: url("images/background_image.jpg") fixed ;
+    border-bottom: 1px #dda9a5 solid;
 }
 .logo
 {
-    width: 450px;
-    height: 105 px;
+   /* width: 450px;*/
+    height: 110px;
     background: white;
     border: 1px #dda9a5 solid;
     display : flex;
@@ -50,32 +61,35 @@
     position: absolute; 
     top : 93px;
     left : 125px;
+    z-index: 1;
 }
 .logo h1
 {
     font-family: 'melody_southernscript';
-    font-size: 3.5em;
+    font-size: 4em;
     text-align: center;
     color: #11253a;
-    margin: auto;
-    
-
+    margin: 0;
+    padding: 0.2em;
+    z-index: 2;
+    position: relative;
+    top: -15px;
+}
+a
+{
+    text-decoration: none;
 }
 .logo h2
 {
     font-family: 'melody_southernregular';
     font-size: 1.15em;
     color: #dda9a5;
-    margin: auto;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+    position : relative;
+    top: -30px;
 }
-/* Définition des styles de polices */ 
-section, .cloud, .formation_aside
-{
-    width : 80%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
 p, ul
 {
     font-family: 'ciclefina';
@@ -83,9 +97,12 @@ p, ul
 }
 #subtitle
 {
+    font-family: 'ciclesemi';
+    font-weight: bold;
     font-size: 1.3em;
-    padding-left: 20px;
-    padding-top: 55px;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: start ;
 }
 h1, h2
 {
@@ -114,18 +131,17 @@ h3
 .block_1
 {
     display: flex;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: space-between;
 }
 .skills
 {
-    width: 450px;
+    vertical-align: auto;
     list-style-image: url(images/Fichier\ 3-8.png);
     font-size: 1.3em;
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+    line-height: 1.8em;
 }
 .skills li
 {
@@ -134,10 +150,8 @@ h3
 /* Bloc des réalisations */ 
 .block_2
 {
-    width: 225px;
+    width: 70%;
     border-left: #11253a solid 1px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .image
 {
@@ -149,28 +163,27 @@ h3
 .project
 {
     display: flex;
-    align-items: center;
-    
-    width: 1020px;
+    align-items: flex-end;
     margin-left: 18px;
 }
 .project_text
 {
-    width: 350px;
-    margin-left: 10px;
-    margin-top: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
     text-align: justify;
+    transform: translateY(10px);
 }
 .block_2 h2
 {
     margin-left: 20px;
 }
-#cloud /* A MODIFIER - ajouter des espaces au-dessus et en dessous */
+
+/*Nuage*/ 
+#cloud
 {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    vertical-align: auto;
 }
 ul.cloud
 {
@@ -210,9 +223,9 @@ ul.cloud li
   /* Calcul de la taille selon le degré d'importance */
     opacity: calc((15 - (9 - var(--size))) / 15); 
     /* Opacité selon le degré d'importance */
- }
+}
   ul.cloud li:hover 
-{ /* Changement de couleur pendant survol */ 
+{
     color: #dda9a5;
 } 
 /* Ajout d'un texte au survol */
@@ -237,7 +250,7 @@ ul.cloud li
   bottom: 105%;
   left: 50%;
   margin-left: -60px;  
-  opacity: 0;/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
   transition: opacity 1s;
 }
 .tooltip:hover .tooltiptext 
@@ -260,7 +273,7 @@ ul.cloud li
   bottom: 200%;
   left: 50%;
   margin-left: -60px;  
-  opacity: 0;/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
   transition: opacity 1s;
 }
 .toptooltip:hover .tooltiptext 
@@ -278,7 +291,6 @@ ul.cloud li
     line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: -5px;
@@ -324,7 +336,6 @@ ul.cloud li
     line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: 105%;
@@ -336,6 +347,7 @@ ul.cloud li
   .bottomtooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+    z-index: 3
   }
 
 .bottomtooltip2 .tooltiptext 
@@ -348,7 +360,6 @@ ul.cloud li
     line-height: normal;
     border-radius: 6px;
     padding: 5px 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     top: 200%;
@@ -368,8 +379,7 @@ ul.cloud li
 {
     display: flex;
     justify-content: space-around;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-bottom: 7%;
 }
 .formation li
 {
@@ -381,15 +391,15 @@ ul.cloud li
 }
 aside
 {
-    width: 450px;
+    width: 30%;
     background-color: #f3efed;
     border: 1px #dda9a5 solid;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.363);
     text-align: justify;
     line-height: 18px; 
     font-size: 0.8em;
     z-index: 1;
-    padding: 0.5em;
-    padding-top: 1em;
+    padding: 0.8em;
 }
 aside h3
 {
@@ -401,6 +411,100 @@ aside h3
     width: 250px;
     position : relative;
     z-index: 2;
-    margin-left: 95px;
+    margin-left: 50px;
     margin-top: -40px;
+}
+#certification
+{
+    font-size: 1em;
+    padding-left: 2em;
+}
+#certfication img
+{
+    margin-top: 15px;
+}
+#ancre
+{
+    position:relative;
+    left: 49%;
+}
+footer
+{
+    background: url("images/background_image.jpg") repeat;
+    border-top: 1px #dda9a5 solid;
+    border-bottom: 1px #dda9a5 solid;
+}
+#footer_block
+{
+    width: 95%;
+    height: 110px;
+    background-color: #f3efed;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    border: 0.2px #dda9a5 solid;
+}
+#footer_block h1
+{
+    font-family: 'melody_southernscript';
+    color: #11253a;
+    font-size: 2em;
+    padding-left: 10px;
+    width: 250px;
+    z-index: 2;
+    position: relative;
+    margin-top: -10px;
+}
+.footer_disposition
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    z-index: 1;
+    margin-top: -45px;
+}
+.contact_me
+{
+    margin: 0;
+}
+.contact_me h2
+{
+    font-size: 1em;
+    padding-left: 1em;
+    color: #dda9a5;
+    text-decoration: none;
+    margin: 0;
+}
+.contact_me :visited
+{
+    font-size: 1em;
+    padding-left: 1em;
+    color: #11253a;
+    text-decoration: none;
+}
+.contact_me :hover 
+{
+    color: #254155
+}
+.social_media img
+{
+    margin: 0;
+    padding: 0.2em;
+    position: relative;
+    left: -55%;
+}
+.info
+{
+    font-size: 1em;
+    padding-right: 1em;
+    text-align: right;
+    margin: 0;
+}
+
+#mentions
+{
+    font-size: 0.5em ;
+    text-align: center;
+    padding-bottom: 5px;
 }
