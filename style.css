@@ -31,27 +31,25 @@
 
 }
 /* En-tête - bannière */ 
-body
+html, body
 {
-    width: 100%;
-    margin: 0;
+    margin:0;
+    padding:0;*/
 }
 #global
 {
-    width :70% ;
+    width :70%;
     margin :auto ;
     padding :25px ;
 }
 #header_block
 {
-    width: 100%;
     height: 150px;
     background: url("images/background_image.jpg") fixed ;
     border-bottom: 1px #dda9a5 solid;
 }
 .logo
 {
-   /* width: 450px;*/
     height: 110px;
     background: white;
     border: 1px #dda9a5 solid;
@@ -202,7 +200,7 @@ ul.cloud li {
     color: #254155;
     display: block;
     font-size: 1.5rem;
-    padding: 0.125rem 0.25rem;
+    padding: 0.25rem 0.25rem;
     text-decoration: none;
     position: relative;
   }
@@ -302,6 +300,7 @@ ul.cloud li
 {
     visibility: visible;
     opacity: 1;
+    z-index: 3
 }
 
 .lefttooltip .tooltiptext 
@@ -386,12 +385,33 @@ ul.cloud li
     list-style: none;
     font-size : 1.2em; 
     padding: 0.25em;
-    width: 650px;
+    width: 60%;
     line-height: 35px;
+}
+.CESI
+{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+.aside_title
+{
+    width: 80%;
+    background-color: #fff;
+    border: 2.8px #dda9a5 solid;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.699);
+    padding: 0.2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10%;
+    text-align: center;
+    position : relative;
+    z-index: 2;
 }
 aside
 {
-    width: 30%;
+    width: 35%;
+    height: 25%;
     background-color: #f3efed;
     border: 1px #dda9a5 solid;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.363);
@@ -400,19 +420,6 @@ aside
     font-size: 0.8em;
     z-index: 1;
     padding: 0.8em;
-}
-aside h3
-{
-    background-color: #fff;
-    border: 2.8px #dda9a5 solid;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.699);
-    padding: 0.2em;
-    text-align: center;
-    width: 250px;
-    position : relative;
-    z-index: 2;
-    margin-left: 50px;
-    margin-top: -40px;
 }
 #certification
 {
@@ -426,7 +433,7 @@ aside h3
 #ancre
 {
     position:relative;
-    left: 49%;
+    margin-left: 49%;
 }
 footer
 {
@@ -492,7 +499,7 @@ footer
     margin: 0;
     padding: 0.2em;
     position: relative;
-    left: -55%;
+    left:-55%;
 }
 .info
 {
@@ -507,4 +514,68 @@ footer
     font-size: 0.5em ;
     text-align: center;
     padding-bottom: 5px;
+}
+@media all and (max-device-width: 480px)
+{
+    body
+    {
+        width: 100%;
+    }
+    .block_1
+    {
+        flex-direction: column;
+    }
+    .block_2
+    {
+    width: 100%;
+    border: none;
+    }
+    aside h3
+    {
+        margin-left: 0px;
+    }
+    .righttooltip .tooltiptext
+    {
+        width: 190px;
+    }
+    .project_text
+    {
+        font-size: 1.5em;
+    }
+    .project img
+    {
+        width: 300px;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    .cesi
+    {
+       font-size: 1.1em;
+        overflow: visible;
+    }
+    ul.cloud li 
+    {
+  --size: 3;
+  font-size: calc(var(--size) * 0.30rem + 0.8rem);
+  /* Calcul de la taille selon le degré d'importance */
+    opacity: calc((15 - (9 - var(--size))) / 15); 
+    /* Opacité selon le degré d'importance */
+    }
+    #cloud
+    {
+        font-size: 1.8em;
+    }
+    .lefttooltip .tooltiptext 
+    {
+        width: 200px;
+    }
+    .formation
+    {
+        font-size: 1.2em;
+    }
+    .project
+    {
+    display: flex;
+    align-items: center;
+    }
 }
