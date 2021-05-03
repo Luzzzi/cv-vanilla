@@ -255,6 +255,7 @@ ul.cloud li
 {
   visibility: visible;
   opacity: 1;
+  z-index: 3
 }
 .toptooltip .tooltiptext 
 {
@@ -278,6 +279,7 @@ ul.cloud li
 {
   visibility: visible;
   opacity: 1;
+  z-index: 3
 }
 .righttooltip .tooltiptext 
 {
@@ -325,6 +327,7 @@ ul.cloud li
 {
     visibility: visible;
     opacity: 1;
+    z-index: 3
 }
   .bottomtooltip .tooltiptext {
     visibility: hidden;
@@ -371,6 +374,7 @@ ul.cloud li
 {
     visibility: visible;
     opacity: 1;
+    z-index: 3
 }
 
 /* Bloc Formation */ 
